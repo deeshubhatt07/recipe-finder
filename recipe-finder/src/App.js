@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from './Header/Header';
 import Search from './Recipe/Search';
+import Display from './Recipe/Display'
 import './App.css';
 
 class App extends React.Component{
@@ -9,6 +10,7 @@ class App extends React.Component{
             <div className="main">
                 <Header />
                 <Search />
+                <Display />
             </div>
         )
     }

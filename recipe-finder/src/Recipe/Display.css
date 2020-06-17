@@ -1,0 +1,30 @@
+
+
+.maindisplay{
+    background-color: lightpink;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 10px;
+    display: flex;
+}
+
+h3{
+    background-color: antiquewhite;
+    margin-bottom: none;
+    padding: 10px;
+    border-bottom: none;
+}
+
+img{
+    width: 25%;
+    border-top: none;
+    margin-left: 5%;
+    margin-right: 10%;
+    border: black;
+}
+
+p{
+    padding: 5px;
+    background-color: gray;
+    margin-right: 25%;
+}
