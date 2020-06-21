@@ -32,30 +32,24 @@ class Display extends Component{
         xhr.send(data);
     }
 
+    clickHandler(){
+        console.log("Found")
+    }
+
     render(){
-
-        // let filteredContacts = this.state.recipies.filter(
-        //     (dish) => {
-        //         if(dish.strMeal.toLowerCase().includes(this.props.title.toLowerCase()))
-        //             return dish
-        //         else{
-        //             return(<div>No post found</div>)
-        //         }
-
-        //     }
-        // )
 
         return(
             <div className="display">
                 <Header />
                 <Search />
 
-                {this.state.recipies.filter(contact => contact.strMeal.toLowerCase().includes(this.props.title)).map(dish => {
+                {this.state.recipies.filter(contact => contact.strMeal.toLowerCase().includes(this.props.title.toLowerCase())).map(dish => {
                     return(
                         <Controller dish={dish} key={this.state.recipies.id} imag={this.state.recipies.strMealThumb} />
-                    ) 
+                    )
                 })}
 
+                <div style={{textAlign: "center", fontWeight:"bold"}}>No Data has been received</div>
             </div>
         )
     }

@@ -1,15 +1,18 @@
-
+.headers{
+    font-style: italic;
+    font-weight: 700;
+}
 
 .maindisplay{
-    background-color: lightpink;
+    background-color: dimgrey;
     margin-left: 15px;
     margin-right: 15px;
-    margin-top: 10px;
+    margin-top: none;
     display: flex;
 }
 
 h3{
-    background-color: antiquewhite;
+    background-color: lightcyan;
     margin-bottom: none;
     padding: 10px;
     border-bottom: none;
@@ -27,5 +30,25 @@ img{
 p{
     padding: 5px;
     background-color: gray;
-    margin-right: 25%;
+    margin-right: 15%;
+}
+
+.ingrads{
+    padding: 5px;
+    background-color: gray;
+    margin-right: 15%;
+}
+
+.container{
+    background-color: moccasin;
+    margin-top: 15px;
+    padding: 15px;
+    border-bottom: none;
+    margin-bottom: none;
+    font-weight: bold;
+    font-size: larger;
+}
+
+.submain{
+    padding: 20px;
 }

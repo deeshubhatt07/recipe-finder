@@ -20,7 +20,6 @@ class Search extends React.Component{
     }
 
     handler(){
-        console.log(this.state.dishname);
         ReactDOM.render(<Display title={this.state.dishname} />,document.getElementById('root'))
     }
 
