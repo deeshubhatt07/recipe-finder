@@ -32,9 +32,6 @@ class Display extends Component{
         xhr.send(data);
     }
 
-    clickHandler(){
-        console.log("Found")
-    }
 
     render(){
 
@@ -49,7 +46,7 @@ class Display extends Component{
                     )
                 })}
 
-                <div style={{textAlign: "center", fontWeight:"bold"}}>No Data has been received</div>
+                {/* {<div style={{textAlign: "center", fontWeight:"bold", marginTop: 25}}>No Data has been received</div>} */}
             </div>
         )
     }
