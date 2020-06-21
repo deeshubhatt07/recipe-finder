@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import './Display.css'
-import Ingrediants from '../Ingrediants/Ingrediants';
 import Search from './Search';
 import Header from '../Header/Header';
 import Controller from '../Controller'
@@ -11,7 +10,7 @@ class Display extends Component{
         super(props);
         this.state = {
             dataFound: 0,
-            recipies: [{}],
+            recipies: [],
             name: "fords"
         }
     }
@@ -37,7 +36,12 @@ class Display extends Component{
 
         // let filteredContacts = this.state.recipies.filter(
         //     (dish) => {
-        //         return dish.strMeal.indexOf(this.props.title) !== -1;
+        //         if(dish.strMeal.toLowerCase().includes(this.props.title.toLowerCase()))
+        //             return dish
+        //         else{
+        //             return(<div>No post found</div>)
+        //         }
+
         //     }
         // )
 
@@ -46,27 +50,11 @@ class Display extends Component{
                 <Header />
                 <Search />
 
-                {this.state.recipies.map(dish => {
+                {this.state.recipies.filter(contact => contact.strMeal.toLowerCase().includes(this.props.title)).map(dish => {
                     return(
                         <Controller dish={dish} key={this.state.recipies.id} imag={this.state.recipies.strMealThumb} />
                     ) 
                 })}
-
-
-                {/* {<h3 className="container" style={{marginLeft: 15, marginRight:15}}>{this.state.recipies.strMeal}</h3>
-                <div className="maindisplay">
-                    <img src={this.state.recipies.strMealThumb} alt="icon" />
-                    <div>
-                        category of meal: {this.state.recipies.strCategory}<br/>
-                        Area of meal: {this.state.recipies.strArea}<br/><br/>
-                        <div>Ingrediantes: <br/>
-                            
-                        </div>
-                        <p>Recipies: {this.state.recipies.strInstructions}</p>
-                    </div>
-                </div>} */}
-
-
 
             </div>
         )
